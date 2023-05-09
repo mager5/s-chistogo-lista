@@ -3,11 +3,20 @@
 }
 
 html {
-    font-family: Impact, sans-serif;
+    font-family: Inter, EB Garamond;
     font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote {
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p, 
+ul, 
+ol, 
+blockquote {
     margin: 0;
     padding: 0;
 }
@@ -30,7 +39,7 @@ body {
 .content-section {
     box-sizing: border-box;
     width: 360px;
-    margin: auto; 
+    margin: auto;
 }
   
 /* Header styles start */
@@ -272,14 +281,11 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 135%;
+    margin-bottom: 8px;
 }
 
 .card__author-photo {
     width: 100px;
-    margin-bottom: 8px;
-}
-
-.card__author-name {
     margin-bottom: 8px;
 }
 
@@ -307,7 +313,7 @@ footer {
 .footer__links {
     display: flex;
     justify-content: space-between;
-    list-style: none;   
+    list-style: none; 
 }
 
 .footer__link-list-link {
