@@ -3,7 +3,7 @@
 }
 
 html {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, sans-serif;
     font-weight: 400;
 }
 
@@ -13,74 +13,89 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote {
 }
 
 body {
-    margin: 0;
     background: #1e1e1e;
-}
-  
-/* Header styles start */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 24px 20px;
-    flex-direction: row;
+    margin: 0;
 }
 
 .content-section_theme_dark {
-    color: #fff;
-    background-color:  #131313;
+    color: #ffffff;
+    background-color: #131313;
+}
+
+.content-section_theme_bright {
+    color: #131313;
+    background-color: #fee42a;
 }
 
 .content-section {
     box-sizing: border-box;
     width: 360px;
-    margin: auto;
+    margin: auto; 
+}
+  
+/* Header styles start */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 20px 12px;
+    flex-direction: row;
 }
 
-.logo__image {
+.header__logo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header__logo-image {
     width: 78.45px;
 }
 
-.menu {
-    margin-left: auto;
-    justify-content: space-between;
+.header__menu {
+    display: flex;
     align-items: center;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 20px;
 }
 
-.menu__list {
+.header__menu-item_active {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.header__menu-item {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.header__menu-list {
     list-style: none;
 }
 
-.menu__list_-item {
-    margin-left: 10px;
-  }
-
-.menu__list-link {
-    color: #F5F5F5;
-    text-decoration: none;
+.header__menu-link {
+    color: #f5f5f5;
 }
 
-.menu__list-link:hover {
-    text-decoration: underline;
+.header__menu-link_active {
+    color: #f5f5f5;
+    text-decoration: none;
 }
 
 /* Header styles end */
 
+/* Cover styles start */
 
 .cover {
-    background-color: #131313;
     background-image: url(/images/cover.svg);
     background-repeat: no-repeat;
-    height: 100%;
-    padding: 0 20px 7px;
-    width: 360px;
-    margin: auto;
+    background-position-x: 20px;
+    background-position-y: 26px;
+    background-size: 95% auto;
+    padding: 7px 20px 8px;
+    min-height: 228px;
 }
 
 .cover__title {
@@ -104,51 +119,67 @@ header {
     text-align: right;
 }
 
+/* Cover styles end */
+
+/* Intro styles start */
 
 .intro {
-    background-color: #131313;
-    height: 100%;
-    padding: 24px 20px;
+    padding: 24px 20px 10px;
 }
 
-.intro__main-text {
+.intro__heading {
+    display: flex;
+    margin-bottom: 24px;
+
+}
+
+.intro__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #cccccc;
+}
+
+.intro__date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #cccccc;
+    white-space: nowrap;
+}
+
+.intro__main-text > p {
     color: #f5f5f5;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+    margin-bottom: 24px;
 }
 
+/* Intro styles end */
 
+/* Reasons styles start */
 
-.content-section_theme_bright {
-    background-color: #fee42a;
-    height: 100%;
-    padding: 40px 20px;
+.reasons {
+    padding: 40px 20px 24px;
 }
 
-.section__title-first {
+.content-section__subtitle {
     font-family: 'EB Garamond';
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
     line-height: 115%;
-    text-align: right;
-    color: #131313;
-}
-
-.section__title-second {
-    font-family: 'EB Garamond';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 115%;
-    color: #131313;
     margin-bottom: 32px;
 }
 
-.section__text {
+.content-section__introduction {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -158,22 +189,114 @@ header {
     margin-bottom: 32px;
 }
 
+.content-section__list {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21.6px;
+    
+}
 
+.content-section__list-accent {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21.6px;
+    
+}
+
+.content-section__list-item {
+    margin-left: 18px;
+    margin-bottom: 16px;
+}
+
+/* Reasons styles end */
+
+/* How-to styles start */
+
+.how__to {
+    padding: 40px 20px 27px;
+}
+
+.how-to__content-section__introduction {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #f5f5f5;
+    margin-bottom: 32px;
+}
+
+.card {
+    display: block;
+    width: 319px;
+    margin: auto;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+.card_theme_dark {
+    background-color: #343434;
+    color: #f5f5f5;
+}
+
+.card_theme_bright {
+    background-color: #fee42a;
+    color: #131313;
+}
+
+.card__title {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 135%;
+    margin-bottom: 8px;
+}
+
+.card__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21.6px;
+}
+
+.card__author-name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 135%;
+}
+
+.card__author-photo {
+    width: 100px;
+    margin-bottom: 8px;
+}
+
+.card__author-name {
+    margin-bottom: 8px;
+}
+
+/* How-to styles end */
 
 /* Footer styles start */
 
 footer {
     display: flex;
     justify-content: space-between;
-    width: 360px;
-    margin: 0 auto;
     padding: 20px;
-    background-color:  #131313;
     align-items: center;
+    border-top: 1px solid #fee42a;
 }
 
 .footer__copy {
-    color: #F5F5F5;
+    color: #f5f5f5;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -184,8 +307,7 @@ footer {
 .footer__links {
     display: flex;
     justify-content: space-between;
-    list-style: none;
-    
+    list-style: none;   
 }
 
 .footer__link-list-link {
@@ -195,7 +317,7 @@ footer {
     font-size: 14px;
     line-height: 125%;
     text-decoration: none;
-    color: #F5F5F5;
+    color: #f5f5f5;
     margin-left: 16px;
 }
 
