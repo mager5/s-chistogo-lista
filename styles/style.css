@@ -313,7 +313,7 @@ footer {
 .footer__links {
     display: flex;
     justify-content: space-between;
-    list-style: none; 
+    list-style: none;
 }
 
 .footer__link-list-link {
